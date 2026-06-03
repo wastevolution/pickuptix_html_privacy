@@ -3,268 +3,386 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PickupTix — Privacy Policy</title>
+  <title>Wearing — Privacy Policy</title>
+  <meta name="description" content="How the Wearing app collects, uses, and protects your information." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Spectral:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#f7f9fb;
-      --card:#ffffff;
-      --muted:#6b7280;
-      --accent:#2563eb;
-      --accent-2:#06b6d4;
-      --shadow: 0 6px 24px rgba(16,24,40,0.08);
-      --radius:14px;
-      color-scheme: light;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background:linear-gradient(180deg, #f8fbff 0%, var(--bg) 100%);
-      color:#0f172a;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.6;
-      padding:32px 20px;
+    :root {
+      --bone: #F4EEE3;
+      --sand: #E8DEC9;
+      --paper: #FFFFFF;
+      --rule: #D9D1C1;
+      --mute: #9A9085;
+      --ink2: #5B544A;
+      --ink: #1F1B16;
+      --clay: #B85C3C;
+      --claySoft: #E8D6CC;
+      --olive: #6B6A3F;
+      --oliveSoft: #DAD9C2;
+
+      --font-display: "Instrument Serif", "Cormorant Garamond", Georgia, serif;
+      --font-body: "DM Sans", -apple-system, system-ui, sans-serif;
+      --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", monospace;
     }
 
-    .wrap{
-      max-width:900px;
-      margin:0 auto;
-      display:grid;
-      grid-template-columns: 1fr;
-      gap:20px;
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bone);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
-    header.card{
-      background:var(--card);
-      padding:28px 28px;
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      display:flex;
-      gap:20px;
-      align-items:center;
-    }
-    .logo{
-      width:64px;height:64px;border-radius:12px;
-      display:flex;align-items:center;justify-content:center;
-      background:linear-gradient(135deg,var(--accent),var(--accent-2));
-      color:#fff;font-weight:700;font-family:Spectral,serif;font-size:20px;
-      box-shadow:0 6px 18px rgba(37,99,235,0.18);
-    }
-    header h1{margin:0;font-size:20px}
-    header p{margin:4px 0 0;color:var(--muted);font-size:14px}
-
-    .content{
-      background:var(--card);
-      padding:28px;
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
+    /* ── micro labels ────────────────────────────── */
+    .micro {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--mute);
     }
 
-    .meta{
-      display:flex;flex-wrap:wrap;gap:12px;margin-bottom:18px;align-items:center;
+    /* ── shell ───────────────────────────────────── */
+    .page { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── hero ────────────────────────────────────── */
+    header.hero {
+      padding: 72px 0 40px;
+      border-bottom: 1px solid var(--rule);
     }
-    .badge{background:#eef2ff;color:var(--accent);padding:6px 10px;border-radius:999px;font-size:13px;font-weight:600}
-    .updated{color:var(--muted);font-size:13px}
-
-    nav.toc{
-      display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px;
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 36px;
     }
-    nav.toc a{font-size:14px;color:var(--accent);text-decoration:none;padding:6px 10px;border-radius:8px;border:1px solid transparent}
-    nav.toc a:hover{background:#f1f8ff;border-color:#e6f0ff}
-
-    h2{font-family:Spectral, serif;margin-top:12px}
-    h3{margin:0 0 8px}
-    p{margin:0 0 12px;color:#111827}
-    ul{margin:0 0 12px 20px;color:#111827}
-    li{margin:6px 0}
-
-    .contact{
-      display:flex;gap:16px;align-items:center;margin-top:16px;padding:14px;border-radius:10px;background:linear-gradient(90deg,#f8fafc,#ffffff);
-      border:1px solid rgba(2,6,23,0.04)
+    .brand .dot {
+      width: 28px; height: 28px;
+      border-radius: 8px;
+      background: var(--clay);
+      box-shadow: 0 6px 16px -6px rgba(184,92,60,0.6);
     }
-    .contact .info{font-size:14px}
-    .contact .info div{color:var(--muted);font-size:13px}
+    .brand .name {
+      font-family: var(--font-display);
+      font-size: 26px;
+      line-height: 1;
+    }
+    h1 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: 56px;
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      margin: 0 0 18px;
+    }
+    .lede {
+      font-size: 18px;
+      color: var(--ink2);
+      max-width: 56ch;
+      margin: 0;
+    }
+    .stamp {
+      margin-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 28px;
+    }
+    .stamp span { display: inline-flex; gap: 8px; }
+    .stamp b { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.10em; color: var(--ink); font-weight: 600; }
 
-    footer{margin-top:14px;text-align:center;color:var(--muted);font-size:13px}
+    /* ── TOC ─────────────────────────────────────── */
+    nav.toc {
+      margin: 36px 0 8px;
+      padding: 20px 22px;
+      background: var(--sand);
+      border: 1px solid var(--rule);
+      border-radius: 16px;
+    }
+    nav.toc .micro { display: block; margin-bottom: 14px; }
+    nav.toc ol {
+      margin: 0; padding: 0;
+      list-style: none;
+      counter-reset: toc;
+      columns: 2;
+      column-gap: 28px;
+    }
+    nav.toc li {
+      counter-increment: toc;
+      margin-bottom: 9px;
+      break-inside: avoid;
+    }
+    nav.toc a {
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 15px;
+      display: inline-flex;
+      gap: 10px;
+      align-items: baseline;
+    }
+    nav.toc a::before {
+      content: counter(toc, decimal-leading-zero);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--clay);
+      letter-spacing: 0.06em;
+    }
+    nav.toc a:hover { color: var(--clay); }
 
-    .actions{margin-left:auto;display:flex;gap:8px}
-    .btn{border:0;padding:8px 12px;border-radius:10px;font-weight:600;cursor:pointer}
-    .btn.ghost{background:transparent;border:1px solid rgba(15,23,42,0.06)}
-    .btn.primary{background:var(--accent);color:#fff}
+    /* ── sections ────────────────────────────────── */
+    main { padding: 8px 0 40px; }
+    section { padding: 40px 0; border-bottom: 1px solid var(--rule); scroll-margin-top: 24px; }
+    section:last-of-type { border-bottom: none; }
+    section > .micro { display: block; margin-bottom: 10px; }
+    h2 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      margin: 0 0 16px;
+    }
+    p { margin: 0 0 16px; color: var(--ink2); }
+    p:last-child { margin-bottom: 0; }
+    strong { color: var(--ink); font-weight: 600; }
+    a { color: var(--clay); text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
 
-    /* responsive */
-    @media (max-width:640px){
-      body{padding:18px 14px}
-      header{padding:18px}
-      .wrap{gap:14px}
+    ul.clean { margin: 0 0 16px; padding: 0; list-style: none; }
+    ul.clean li {
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 12px;
+      color: var(--ink2);
+    }
+    ul.clean li::before {
+      content: "";
+      position: absolute;
+      left: 0; top: 10px;
+      width: 7px; height: 7px;
+      border-radius: 2px;
+      background: var(--olive);
+    }
+    ul.clean li strong { display: inline; }
+
+    /* ── data cards ──────────────────────────────── */
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 4px 0 8px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      border-radius: 16px;
+      padding: 18px 18px 20px;
+    }
+    .card .micro { color: var(--clay); margin-bottom: 8px; display: block; }
+    .card h3 { font-family: var(--font-body); font-size: 16px; font-weight: 600; margin: 0 0 6px; }
+    .card p { font-size: 14px; margin: 0; }
+
+    /* ── callout ─────────────────────────────────── */
+    .callout {
+      background: var(--oliveSoft);
+      border: 1px solid var(--rule);
+      border-radius: 16px;
+      padding: 20px 22px;
+      margin: 8px 0;
+    }
+    .callout p { color: var(--ink); margin: 0; }
+
+    /* ── contact ─────────────────────────────────── */
+    .contact {
+      background: var(--ink);
+      color: var(--bone);
+      border-radius: 22px;
+      padding: 36px 32px;
+      margin: 40px 0;
+    }
+    .contact .micro { color: rgba(244,238,227,0.55); }
+    .contact h2 { color: var(--bone); margin: 10px 0 12px; }
+    .contact p { color: rgba(244,238,227,0.82); }
+    .contact a { color: var(--bone); }
+    .mail {
+      display: inline-block;
+      margin-top: 8px;
+      font-family: var(--font-mono);
+      font-size: 15px;
+      letter-spacing: 0.02em;
     }
 
-    /* small print */
-    .small{color:var(--muted);font-size:13px}
-    .section{margin-bottom:18px}
-    code{background:#f1f5f9;padding:2px 6px;border-radius:6px;font-size:13px}
+    /* ── footer ──────────────────────────────────── */
+    footer {
+      padding: 28px 0 64px;
+      text-align: center;
+    }
+    footer .micro { letter-spacing: 0.14em; }
+
+    /* ── responsive ──────────────────────────────── */
+    @media (max-width: 600px) {
+      h1 { font-size: 40px; }
+      h2 { font-size: 26px; }
+      .lede { font-size: 16px; }
+      nav.toc ol { columns: 1; }
+      .cards { grid-template-columns: 1fr; }
+      header.hero { padding: 48px 0 32px; }
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header class="card" role="banner">
-      <div class="logo">PT</div>
-      <div>
-        <h1>PickupTix — Privacy Policy</h1>
-        <p class="small">Clear, simple, and made for your users.</p>
+  <div class="page">
+
+    <header class="hero">
+      <div class="brand">
+        <span class="dot"></span>
+        <span class="name">Wearing</span>
       </div>
-      <div class="actions" aria-hidden="true">
-        <button class="btn ghost" onclick="window.print()">Print</button>
+      <span class="micro">Privacy Policy</span>
+      <h1>Your wardrobe,<br>kept private.</h1>
+      <p class="lede">Wearing helps you plan outfits, track your wardrobe, and shop with intention. This policy explains what we collect, why, and the control you keep over it.</p>
+      <div class="stamp">
+        <span class="micro">Effective <b>June 3, 2026</b></span>
+        <span class="micro">Last updated <b>June 3, 2026</b></span>
       </div>
     </header>
 
-    <main class="content" role="main">
-      <div class="meta">
-        <div class="badge">Privacy Policy</div>
-        <div class="updated">Last Updated: <strong id="lastUpdated">[Date]</strong></div>
-      </div>
+    <nav class="toc" aria-label="Contents">
+      <span class="micro">On this page</span>
+      <ol>
+        <li><a href="#collect">Information we collect</a></li>
+        <li><a href="#use">How we use it</a></li>
+        <li><a href="#sharing">Sharing &amp; disclosure</a></li>
+        <li><a href="#storage">Storage &amp; security</a></li>
+        <li><a href="#permissions">Device permissions</a></li>
+        <li><a href="#rights">Your rights &amp; choices</a></li>
+        <li><a href="#retention">Data retention</a></li>
+        <li><a href="#children">Children&rsquo;s privacy</a></li>
+        <li><a href="#changes">Changes to this policy</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ol>
+    </nav>
 
-      <nav class="toc" aria-label="Table of contents">
-        <a href="#intro">Introduction</a>
-        <a href="#info">Information We Collect</a>
-        <a href="#use">Use of Information</a>
-        <a href="#sharing">Sharing of Information</a>
-        <a href="#rights">Your Rights</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <section id="intro" class="section">
-        <h2>Introduction</h2>
-        <p>PickupTix (<em>“we,” “our,” or “us”</em>) values your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use the PickupTix mobile application, website, and related services (collectively, the <em>“Platform”</em>). By using our Platform, you consent to the practices described in this Privacy Policy.</p>
-      </section>
-
-      <section id="info" class="section">
-        <h2>1. Information We Collect</h2>
-        <p>We may collect the following categories of information:</p>
-        <ul>
-          <li><strong>Personal Information:</strong> such as your name, email address, phone number, and age, provided during registration or account creation.</li>
-          <li><strong>Ticket Information:</strong> details you share related to event tickets for exchange purposes.</li>
-          <li><strong>Usage Data:</strong> information about your interactions with the Platform, including IP address, device type, operating system, browser type, and access times.</li>
-          <li><strong>Communication Data:</strong> messages, feedback, or queries you exchange with other Users or with PickupTix support.</li>
-        </ul>
-      </section>
-
-      <section id="use" class="section">
-        <h2>2. Use of Information</h2>
-        <p>We use the collected information for the following purposes:</p>
-        <ul>
-          <li>To provide and maintain the functionality of the Platform.</li>
-          <li>To enable peer-to-peer ticket exchange between Users.</li>
-          <li>To ensure compliance with Indian laws, including the Information Technology Act, 2000.</li>
-          <li>To monitor usage trends, prevent fraud, and enhance the security of the Platform.</li>
-          <li>To communicate with you regarding updates, policies, or promotional information, where applicable.</li>
-        </ul>
-      </section>
-
-      <section id="legal" class="section">
-        <h2>3. Legal Basis for Processing (India)</h2>
-        <p>Our processing of your personal data is grounded in the following legal bases:</p>
-        <ul>
-          <li><strong>Consent:</strong> You have consented to the collection and use of your information.</li>
-          <li><strong>Contractual Necessity:</strong> Information is required to fulfill our services under the Terms &amp; Conditions.</li>
-          <li><strong>Legal Obligation:</strong> We may process your data to comply with applicable Indian laws.</li>
-          <li><strong>Legitimate Interest:</strong> To improve user experience, security, and operational efficiency.</li>
-        </ul>
-      </section>
-
-      <section id="sharing" class="section">
-        <h2>4. Sharing of Information</h2>
-        <p>We do not sell, rent, or trade your personal data to third parties. We may share your information with:</p>
-        <ul>
-          <li><strong>Other Users:</strong> limited to the information you choose to disclose for ticket exchange.</li>
-          <li><strong>Service Providers:</strong> third-party vendors assisting in operations such as hosting, analytics, or customer support.</li>
-          <li><strong>Legal Authorities:</strong> where required under Indian law, court order, or regulatory obligation.</li>
-        </ul>
-      </section>
-
-      <section id="retention" class="section">
-        <h2>5. Data Retention</h2>
-        <p>We retain personal information for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required by law. Upon account termination, we may continue to retain certain data for legal, regulatory, or security purposes.</p>
-      </section>
-
-      <section id="security" class="section">
-        <h2>6. Data Security</h2>
-        <p>We implement reasonable technical and organizational measures in compliance with the Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011, to safeguard your information from unauthorized access, disclosure, alteration, or destruction.</p>
-      </section>
-
-      <section id="rights" class="section">
-        <h2>7. Your Rights</h2>
-        <p>As a User in India, you have the right to:</p>
-        <ul>
-          <li>Access and review the personal data we hold about you.</li>
-          <li>Request correction of inaccurate or incomplete data.</li>
-          <li>Withdraw consent for processing your data, subject to legal and contractual restrictions.</li>
-          <li>Request deletion of your data, where applicable.</li>
-        </ul>
-        <p>To exercise these rights, please contact us using the details provided below.</p>
-      </section>
-
-      <section id="children" class="section">
-        <h2>8. Children’s Privacy</h2>
-        <p>PickupTix is not directed toward individuals under the age of 18. We do not knowingly collect personal data from minors. If we become aware that personal data of a minor has been collected, we will take steps to delete such information promptly.</p>
-      </section>
-
-      <section id="thirdparty" class="section">
-        <h2>9. Third-Party Links and Services</h2>
-        <p>The Platform may contain links to third-party websites or services that are not operated by PickupTix. We are not responsible for the privacy practices or content of such third parties. Users are encouraged to review the privacy policies of those services independently.</p>
-      </section>
-
-      <section id="changes" class="section">
-        <h2>10. Changes to This Privacy Policy</h2>
-        <p>We may update this Privacy Policy from time to time in order to reflect changes to our practices or for legal and regulatory reasons. We will notify Users of significant changes, and continued use of the Platform constitutes acceptance of the revised Privacy Policy.</p>
-      </section>
-
-      <section id="contact" class="section">
-        <h2>11. Contact Us</h2>
-        <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us at:</p>
-
-        <div class="contact" role="region" aria-label="Contact information">
-          <div class="info">
-            <strong>PickupTix Support</strong>
-            <div class="small">📧 Email: <a href="mailto:support@pickuptix.com">support@pickuptix.com</a></div>
-            <div class="small">📍 Address: Ahemdabad</div>
+    <main>
+      <section id="collect">
+        <span class="micro">01 — Collection</span>
+        <h2>Information we collect</h2>
+        <p>We collect only what we need to make Wearing work for you. That falls into a few clear categories.</p>
+        <div class="cards">
+          <div class="card">
+            <span class="micro">Account</span>
+            <h3>Profile &amp; sign-in</h3>
+            <p>Your name, email address, and profile photo when you create an account or sign in with Google. Authentication is handled by Supabase and Google Sign-In.</p>
+          </div>
+          <div class="card">
+            <span class="micro">Wardrobe</span>
+            <h3>Items &amp; photos</h3>
+            <p>Photos of clothing you add, plus details like category, color, and tags, and the outfits and shopping lists you build.</p>
+          </div>
+          <div class="card">
+            <span class="micro">Location</span>
+            <h3>Approximate location</h3>
+            <p>Used only to show local weather so outfit suggestions match your day. We don&rsquo;t store your location history.</p>
+          </div>
+          <div class="card">
+            <span class="micro">Usage</span>
+            <h3>Device &amp; diagnostics</h3>
+            <p>Basic app and device information to keep the app stable and diagnose problems.</p>
           </div>
         </div>
-
       </section>
 
-      <footer>
-        <div class="small">&copy; PickupTix — All rights reserved.</div>
-      </footer>
+      <section id="use">
+        <span class="micro">02 — Purpose</span>
+        <h2>How we use your information</h2>
+        <ul class="clean">
+          <li><strong>Run the app.</strong> Save your wardrobe, outfits, and shopping lists, and sync them across your devices.</li>
+          <li><strong>Personalize.</strong> Suggest outfits informed by your wardrobe and local weather.</li>
+          <li><strong>Authenticate.</strong> Verify it&rsquo;s you and keep your account secure.</li>
+          <li><strong>Improve.</strong> Understand what&rsquo;s working so we can fix bugs and refine features.</li>
+        </ul>
+        <div class="callout">
+          <p><strong>We do not sell your personal information,</strong> and we don&rsquo;t use your photos or wardrobe data for advertising.</p>
+        </div>
+      </section>
+
+      <section id="sharing">
+        <span class="micro">03 — Sharing</span>
+        <h2>Sharing &amp; disclosure</h2>
+        <p>We share data only with the service providers that help us operate Wearing, and only as needed:</p>
+        <ul class="clean">
+          <li><strong>Supabase</strong> — secure cloud storage, database, and authentication for your account and wardrobe.</li>
+          <li><strong>Google</strong> — to offer Sign in with Google.</li>
+          <li><strong>Legal &amp; safety</strong> — if required by law, or to protect the rights, safety, and security of our users and the service.</li>
+        </ul>
+        <p>These providers are bound to handle your data securely and only for the purposes we authorize.</p>
+      </section>
+
+      <section id="storage">
+        <span class="micro">04 — Security</span>
+        <h2>Storage &amp; security</h2>
+        <p>Your data is stored on secure cloud infrastructure provided by Supabase. We use encryption in transit, access controls, and row-level security so that you can only see your own data.</p>
+        <p>No method of transmission or storage is ever completely secure, but we work to protect your information using industry-standard safeguards.</p>
+      </section>
+
+      <section id="permissions">
+        <span class="micro">05 — Permissions</span>
+        <h2>Device permissions</h2>
+        <p>Wearing asks for permissions only when a feature needs them, and you can change them anytime in your device settings.</p>
+        <ul class="clean">
+          <li><strong>Photos &amp; camera.</strong> To add pictures of clothing to your wardrobe.</li>
+          <li><strong>Location.</strong> To show local weather for outfit planning.</li>
+          <li><strong>Notifications.</strong> To send reminders and updates you&rsquo;ve opted into.</li>
+        </ul>
+      </section>
+
+      <section id="rights">
+        <span class="micro">06 — Control</span>
+        <h2>Your rights &amp; choices</h2>
+        <ul class="clean">
+          <li><strong>Access &amp; edit.</strong> View and update your profile and wardrobe data from within the app.</li>
+          <li><strong>Delete.</strong> Remove individual items or delete your account, which removes your associated data.</li>
+          <li><strong>Withdraw permissions.</strong> Turn off location, photo, or notification access at any time.</li>
+          <li><strong>Request a copy.</strong> Ask us for a copy of the personal data we hold about you.</li>
+        </ul>
+        <p>Depending on where you live, you may have additional rights under laws such as the GDPR or CCPA. We honor those requests &mdash; just reach out.</p>
+      </section>
+
+      <section id="retention">
+        <span class="micro">07 — Retention</span>
+        <h2>Data retention</h2>
+        <p>We keep your information for as long as your account is active. When you delete your account, we delete or anonymize your personal data, except where we&rsquo;re required to retain it for legal reasons.</p>
+      </section>
+
+      <section id="children">
+        <span class="micro">08 — Children</span>
+        <h2>Children&rsquo;s privacy</h2>
+        <p>Wearing is not directed to children under 13, and we do not knowingly collect personal information from them. If you believe a child has provided us data, contact us and we&rsquo;ll remove it.</p>
+      </section>
+
+      <section id="changes">
+        <span class="micro">09 — Updates</span>
+        <h2>Changes to this policy</h2>
+        <p>We may update this policy as Wearing evolves. When we make material changes, we&rsquo;ll revise the date above and, where appropriate, notify you in the app. Continued use means you accept the updated policy.</p>
+      </section>
+
+      <div class="contact" id="contact">
+        <span class="micro">10 — Contact</span>
+        <h2>Questions? Talk to us.</h2>
+        <p>If you have any questions about this policy or how your data is handled, we&rsquo;re happy to help.</p>
+        <a class="mail" href="mailto:akpatel1031@gmail.com">akpatel1031@gmail.com</a>
+      </div>
     </main>
+
+    <footer>
+      <span class="micro">Wearing &middot; &copy; 2026 &middot; All rights reserved</span>
+    </footer>
+
   </div>
-
-  <script>
-    // Auto-fill last updated with today's date if placeholder remains
-    (function(){
-      const el = document.getElementById('lastUpdated');
-      if(!el) return;
-      const text = el.textContent.trim();
-      if(text === '[Date]' || text.length === 0){
-        const d = new Date();
-        const opts = { year:'numeric', month:'long', day:'numeric' };
-        el.textContent = d.toLocaleDateString('en-GB', opts);
-      }
-    })();
-
-    // Smooth scroll for table of contents
-    document.querySelectorAll('nav.toc a').forEach(a=>{
-      a.addEventListener('click', e=>{
-        e.preventDefault();
-        const target = document.querySelector(a.getAttribute('href'));
-        if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
-      });
-    });
-  </script>
 </body>
 </html>
