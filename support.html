@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wearing — Support</title>
+  <meta name="description" content="Get help with the Wearing app — FAQs and contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bone: #F4EEE3; --sand: #E8DEC9; --paper: #FFFFFF; --rule: #D9D1C1;
+      --mute: #9A9085; --ink2: #5B544A; --ink: #1F1B16;
+      --clay: #B85C3C; --claySoft: #E8D6CC; --olive: #6B6A3F; --oliveSoft: #DAD9C2;
+      --font-display: "Instrument Serif", "Cormorant Garamond", Georgia, serif;
+      --font-body: "DM Sans", -apple-system, system-ui, sans-serif;
+      --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bone); color: var(--ink);
+      font-family: var(--font-body); font-size: 16px; line-height: 1.55;
+      -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+    }
+    .micro {
+      font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.16em;
+      text-transform: uppercase; font-weight: 500; color: var(--mute);
+    }
+    .page { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+    header.hero { padding: 72px 0 40px; border-bottom: 1px solid var(--rule); }
+    .brand { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 36px; }
+    .brand .dot {
+      width: 28px; height: 28px; border-radius: 8px; background: var(--clay);
+      box-shadow: 0 6px 16px -6px rgba(184,92,60,0.6);
+    }
+    .brand .name { font-family: var(--font-display); font-size: 26px; line-height: 1; }
+    h1 {
+      font-family: var(--font-display); font-weight: 400; font-size: 56px;
+      line-height: 0.95; letter-spacing: -0.02em; margin: 0 0 18px;
+    }
+    .lede { font-size: 18px; color: var(--ink2); max-width: 56ch; margin: 0; }
+
+    main { padding: 8px 0 40px; }
+    section { padding: 40px 0; border-bottom: 1px solid var(--rule); }
+    section:last-of-type { border-bottom: none; }
+    section > .micro { display: block; margin-bottom: 10px; }
+    h2 {
+      font-family: var(--font-display); font-weight: 400; font-size: 32px;
+      line-height: 1.05; letter-spacing: -0.01em; margin: 0 0 20px;
+    }
+
+    /* FAQ */
+    details {
+      background: var(--paper); border: 1px solid var(--rule);
+      border-radius: 16px; padding: 4px 20px; margin-bottom: 12px;
+    }
+    details summary {
+      list-style: none; cursor: pointer; padding: 16px 0;
+      font-weight: 600; font-size: 16px; display: flex;
+      justify-content: space-between; align-items: center; gap: 16px;
+    }
+    details summary::-webkit-details-marker { display: none; }
+    details summary::after {
+      content: "+"; font-family: var(--font-mono); color: var(--clay);
+      font-size: 20px; line-height: 1; transition: transform .2s ease;
+    }
+    details[open] summary::after { content: "\2013"; }
+    details .answer { padding: 0 0 18px; color: var(--ink2); }
+    details .answer p { margin: 0 0 12px; }
+    details .answer p:last-child { margin-bottom: 0; }
+
+    a { color: var(--clay); text-decoration: underline; text-underline-offset: 2px; }
+
+    /* contact card */
+    .contact {
+      background: var(--ink); color: var(--bone); border-radius: 22px;
+      padding: 36px 32px; margin: 40px 0;
+    }
+    .contact .micro { color: rgba(244,238,227,0.55); }
+    .contact h2 { color: var(--bone); margin: 10px 0 12px; }
+    .contact p { color: rgba(244,238,227,0.82); margin: 0 0 4px; }
+    .contact a { color: var(--bone); }
+    .mail {
+      display: inline-block; margin-top: 10px; font-family: var(--font-mono);
+      font-size: 16px; letter-spacing: 0.02em;
+    }
+    .meta { margin-top: 22px; font-family: var(--font-mono); font-size: 11px;
+      letter-spacing: 0.1em; color: rgba(244,238,227,0.55); }
+
+    footer { padding: 28px 0 64px; text-align: center; }
+    .links { margin-top: 8px; }
+    .links a { color: var(--ink2); margin: 0 10px; font-size: 13px; }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 40px; } h2 { font-size: 26px; } .lede { font-size: 16px; }
+      header.hero { padding: 48px 0 32px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <header class="hero">
+      <div class="brand"><span class="dot"></span><span class="name">Wearing</span></div>
+      <span class="micro">Support</span>
+      <h1>We&rsquo;re here<br>to help.</h1>
+      <p class="lede">Questions about your wardrobe, sign-in, or syncing? Find quick answers below, or reach out and we&rsquo;ll get back to you.</p>
+    </header>
+
+    <main>
+      <section>
+        <span class="micro">FAQ</span>
+        <h2>Common questions</h2>
+
+        <details>
+          <summary>How do I sign in?</summary>
+          <div class="answer">
+            <p>Wearing uses <strong>Sign in with Apple</strong> and <strong>Sign in with Google</strong>. There&rsquo;s no separate password to remember &mdash; just tap your preferred option on the welcome screen.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How do I add clothes to my wardrobe?</summary>
+          <div class="answer">
+            <p>Tap the add button, take a photo (or pick one from your library), then set the category, color, and any tags. Your item is saved instantly and synced to the cloud.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How do outfit suggestions work?</summary>
+          <div class="answer">
+            <p>Wearing combines the items in your wardrobe with your local weather to suggest looks that fit the day. The more of your closet you add, the better the suggestions get.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Is my data backed up?</summary>
+          <div class="answer">
+            <p>Yes. Your wardrobe, outfits, and lists are securely stored in the cloud and synced across your devices, so you won&rsquo;t lose anything if you switch phones.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Why does the app ask for location and photo access?</summary>
+          <div class="answer">
+            <p><strong>Location</strong> is used only to show local weather for outfit planning. <strong>Photos/camera</strong> let you add pictures of your clothing. You can manage both anytime in your device settings.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How do I delete my account or data?</summary>
+          <div class="answer">
+            <p>You can delete individual items in the app, or remove your account entirely from Settings &mdash; this deletes your associated data. You can also email us and we&rsquo;ll handle the request.</p>
+          </div>
+        </details>
+      </section>
+
+      <div class="contact">
+        <span class="micro">Contact</span>
+        <h2>Still need a hand?</h2>
+        <p>Email us and we&rsquo;ll reply as soon as we can &mdash; usually within a couple of days.</p>
+        <a class="mail" href="mailto:akpatel1031@gmail.com">akpatel1031@gmail.com</a>
+        <div class="meta">Wearing Support &middot; iOS</div>
+      </div>
+    </main>
+
+    <footer>
+      <span class="micro">Wearing &middot; &copy; 2026</span>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
