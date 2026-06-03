@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wearing — Your wardrobe, finally organized.</title>
+  <meta name="description" content="Wearing is your digital wardrobe and styling assistant. Snap your clothes, build outfits, and get daily looks based on your closet and the weather." />
+  <meta property="og:title" content="Wearing — Your wardrobe, finally organized." />
+  <meta property="og:description" content="Snap your clothes, build outfits, and dress better with what you already own." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bone: #F4EEE3; --sand: #E8DEC9; --paper: #FFFFFF; --rule: #D9D1C1;
+      --mute: #9A9085; --ink2: #5B544A; --ink: #1F1B16;
+      --clay: #B85C3C; --claySoft: #E8D6CC; --olive: #6B6A3F; --oliveSoft: #DAD9C2;
+      --plum: #5C3B4E; --plumSoft: #D9CCD2;
+      --font-display: "Instrument Serif", "Cormorant Garamond", Georgia, serif;
+      --font-body: "DM Sans", -apple-system, system-ui, sans-serif;
+      --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bone); color: var(--ink);
+      font-family: var(--font-body); font-size: 16px; line-height: 1.55;
+      -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+    }
+    .micro {
+      font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.16em;
+      text-transform: uppercase; font-weight: 500; color: var(--mute);
+    }
+    .page { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+    a { color: inherit; }
+
+    /* nav */
+    nav.top {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 26px 0;
+    }
+    .brand { display: inline-flex; align-items: center; gap: 10px; }
+    .brand .dot {
+      width: 26px; height: 26px; border-radius: 8px; background: var(--clay);
+      box-shadow: 0 6px 16px -6px rgba(184,92,60,0.6);
+    }
+    .brand .name { font-family: var(--font-display); font-size: 24px; line-height: 1; }
+    nav.top .links a { text-decoration: none; color: var(--ink2); font-size: 14px; margin-left: 22px; }
+    nav.top .links a:hover { color: var(--clay); }
+
+    /* hero */
+    .hero { padding: 56px 0 64px; text-align: center; }
+    .hero .eyebrow { display: inline-block; margin-bottom: 22px;
+      padding: 7px 14px; border: 1px solid var(--rule); border-radius: 999px;
+      background: var(--sand); }
+    h1 {
+      font-family: var(--font-display); font-weight: 400; font-size: 76px;
+      line-height: 0.94; letter-spacing: -0.02em; margin: 0 auto 22px; max-width: 14ch;
+    }
+    h1 em { font-style: italic; color: var(--clay); }
+    .hero .lede { font-size: 19px; color: var(--ink2); max-width: 52ch; margin: 0 auto 32px; }
+    .cta { display: inline-flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
+      padding: 14px 22px; border-radius: 999px; font-weight: 600; font-size: 15px;
+    }
+    .btn.primary { background: var(--ink); color: var(--bone);
+      box-shadow: 0 16px 40px -20px rgba(31,27,22,0.6); }
+    .btn.primary:hover { background: #2A2520; }
+    .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--rule); }
+    .btn.ghost:hover { border-color: var(--clay); color: var(--clay); }
+
+    /* feature grid */
+    .features { padding: 24px 0 40px; }
+    .features .head { text-align: center; margin-bottom: 36px; }
+    .features h2 {
+      font-family: var(--font-display); font-weight: 400; font-size: 40px;
+      letter-spacing: -0.015em; margin: 10px 0 0;
+    }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .feat {
+      background: var(--paper); border: 1px solid var(--rule);
+      border-radius: 20px; padding: 24px;
+    }
+    .feat .ic {
+      width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center;
+      font-size: 22px; margin-bottom: 16px;
+    }
+    .feat:nth-child(1) .ic { background: var(--claySoft); }
+    .feat:nth-child(2) .ic { background: var(--oliveSoft); }
+    .feat:nth-child(3) .ic { background: var(--plumSoft); }
+    .feat:nth-child(4) .ic { background: var(--oliveSoft); }
+    .feat:nth-child(5) .ic { background: var(--plumSoft); }
+    .feat:nth-child(6) .ic { background: var(--claySoft); }
+    .feat h3 { font-size: 17px; font-weight: 600; margin: 0 0 6px; }
+    .feat p { font-size: 14px; color: var(--ink2); margin: 0; }
+
+    /* steps */
+    .steps { padding: 48px 0; }
+    .steps .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 32px; }
+    .step .n {
+      font-family: var(--font-display); font-size: 44px; color: var(--clay); line-height: 1;
+    }
+    .step h3 { font-size: 18px; margin: 12px 0 6px; }
+    .step p { font-size: 14px; color: var(--ink2); margin: 0; }
+    .steps h2 {
+      font-family: var(--font-display); font-weight: 400; font-size: 40px;
+      letter-spacing: -0.015em; margin: 0; text-align: center;
+    }
+
+    /* big cta */
+    .bigcta {
+      background: var(--ink); color: var(--bone); border-radius: 28px;
+      padding: 56px 40px; text-align: center; margin: 40px 0 64px;
+    }
+    .bigcta .micro { color: rgba(244,238,227,0.55); }
+    .bigcta h2 {
+      font-family: var(--font-display); font-weight: 400; font-size: 48px;
+      letter-spacing: -0.015em; margin: 12px 0 14px; color: var(--bone);
+    }
+    .bigcta p { color: rgba(244,238,227,0.82); max-width: 44ch; margin: 0 auto 28px; }
+    .bigcta .btn.primary { background: var(--clay); color: #fff; }
+    .bigcta .btn.primary:hover { background: #C9663F; }
+
+    /* footer */
+    footer { padding: 8px 0 56px; border-top: 1px solid var(--rule); }
+    .foot {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-top: 24px; flex-wrap: wrap; gap: 16px;
+    }
+    .foot .links a { text-decoration: none; color: var(--ink2); font-size: 13px; margin-left: 18px; }
+    .foot .links a:hover { color: var(--clay); }
+    .foot .links a:first-child { margin-left: 0; }
+
+    @media (max-width: 760px) {
+      h1 { font-size: 50px; }
+      .grid { grid-template-columns: 1fr; }
+      .steps .row { grid-template-columns: 1fr; gap: 24px; }
+      .bigcta h2 { font-size: 36px; }
+      nav.top .links a:not(:last-child) { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <nav class="top">
+      <div class="brand"><span class="dot"></span><span class="name">Wearing</span></div>
+      <div class="links">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="support.html">Support</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <span class="eyebrow"><span class="micro">Digital wardrobe &amp; styling</span></span>
+      <h1>Your closet, <em>finally</em> organized.</h1>
+      <p class="lede">Snap the clothes you already own, build outfits you love, and get daily looks based on your wardrobe and the weather. Dress better with what you have.</p>
+      <div class="cta">
+        <a class="btn primary" href="#">Download on the App Store</a>
+        <a class="btn ghost" href="#features">See features</a>
+      </div>
+    </header>
+
+    <section class="features" id="features">
+      <div class="head">
+        <span class="micro">What&rsquo;s inside</span>
+        <h2>Everything your wardrobe needs</h2>
+      </div>
+      <div class="grid">
+        <div class="feat">
+          <div class="ic">&#128247;</div>
+          <h3>Digital wardrobe</h3>
+          <p>Photograph your clothes and organize them by category, color, and tags &mdash; your whole closet in your pocket.</p>
+        </div>
+        <div class="feat">
+          <div class="ic">&#128085;</div>
+          <h3>Outfit builder</h3>
+          <p>Mix and match tops, bottoms, and shoes into looks you love, then save your favorite combinations.</p>
+        </div>
+        <div class="feat">
+          <div class="ic">&#9925;</div>
+          <h3>Weather-aware looks</h3>
+          <p>Get outfit ideas that fit your local forecast, so what you wear always matches the day.</p>
+        </div>
+        <div class="feat">
+          <div class="ic">&#128197;</div>
+          <h3>Plan ahead</h3>
+          <p>Lay out what to wear for the week, trips, and events &mdash; no more stressful mornings.</p>
+        </div>
+        <div class="feat">
+          <div class="ic">&#128722;</div>
+          <h3>Shopping list</h3>
+          <p>Save the pieces you actually need and shop with intention instead of impulse.</p>
+        </div>
+        <div class="feat">
+          <div class="ic">&#9729;</div>
+          <h3>Synced &amp; secure</h3>
+          <p>Sign in with Apple or Google. Your wardrobe is backed up and synced across devices.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps" id="how">
+      <h2>Get dressed in three steps</h2>
+      <div class="row">
+        <div class="step">
+          <div class="n">01</div>
+          <h3>Add your clothes</h3>
+          <p>Snap a photo of each piece and let Wearing organize it for you.</p>
+        </div>
+        <div class="step">
+          <div class="n">02</div>
+          <h3>Build your looks</h3>
+          <p>Pair items into outfits, or let weather-based suggestions inspire you.</p>
+        </div>
+        <div class="step">
+          <div class="n">03</div>
+          <h3>Wear it well</h3>
+          <p>Plan your week, track favorites, and rediscover what you own.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="bigcta">
+      <span class="micro">Start today</span>
+      <h2>Fall back in love with your closet.</h2>
+      <p>Join Wearing and turn the clothes you already own into outfits you&rsquo;ll actually want to wear.</p>
+      <a class="btn primary" href="#">Download on the App Store</a>
+    </div>
+
+    <footer>
+      <div class="foot">
+        <div class="brand"><span class="dot"></span><span class="name">Wearing</span></div>
+        <div class="links">
+          <a href="support.html">Support</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="mailto:akpatel1031@gmail.com">Contact</a>
+        </div>
+      </div>
+      <div style="padding-top:18px;"><span class="micro">&copy; 2026 Wearing &middot; All rights reserved</span></div>
+    </footer>
+
+  </div>
+</body>
+</html>
