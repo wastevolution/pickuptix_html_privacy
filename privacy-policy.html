@@ -248,7 +248,7 @@
       <p class="lede">Wearing helps you plan outfits, track your wardrobe, and shop with intention. This policy explains what we collect, why, and the control you keep over it.</p>
       <div class="stamp">
         <span class="micro">Effective <b>June 3, 2026</b></span>
-        <span class="micro">Last updated <b>June 3, 2026</b></span>
+        <span class="micro">Last updated <b>June 11, 2026</b></span>
       </div>
     </header>
 
@@ -257,6 +257,7 @@
       <ol>
         <li><a href="#collect">Information we collect</a></li>
         <li><a href="#use">How we use it</a></li>
+        <li><a href="#ai">AI clothing detection</a></li>
         <li><a href="#sharing">Sharing &amp; disclosure</a></li>
         <li><a href="#storage">Storage &amp; security</a></li>
         <li><a href="#permissions">Device permissions</a></li>
@@ -282,7 +283,7 @@
           <div class="card">
             <span class="micro">Wardrobe</span>
             <h3>Items &amp; photos</h3>
-            <p>Photos of clothing you add, plus details like category, color, and tags, and the outfits and shopping lists you build.</p>
+            <p>Photos of clothing you add, plus details like category, color, and tags, and the outfits and shopping lists you build. When you add an item, the photo is processed by AI to detect its details (see AI clothing detection).</p>
           </div>
           <div class="card">
             <span class="micro">Location</span>
@@ -302,6 +303,7 @@
         <h2>How we use your information</h2>
         <ul class="clean">
           <li><strong>Run the app.</strong> Save your wardrobe, outfits, and shopping lists, and sync them across your devices.</li>
+          <li><strong>Detect clothing details.</strong> When you add an item, we use AI to automatically identify attributes such as type and color, which you can then review and edit.</li>
           <li><strong>Personalize.</strong> Suggest outfits informed by your wardrobe and local weather.</li>
           <li><strong>Authenticate.</strong> Verify it&rsquo;s you and keep your account secure.</li>
           <li><strong>Improve.</strong> Understand what&rsquo;s working so we can fix bugs and refine features.</li>
@@ -311,27 +313,36 @@
         </div>
       </section>
 
+      <section id="ai">
+        <span class="micro">03 — AI</span>
+        <h2>AI clothing detection</h2>
+        <p>To save you time, Wearing can automatically detect the details of a clothing item from its photo. When you add an item, the photo you choose is sent to <strong>Google&rsquo;s Gemini API</strong>, which analyzes the image and returns attributes such as garment type, color, and category. You can then review and edit these details before saving.</p>
+        <p>Only the clothing-item image you choose to add is sent for this purpose. We do not send your name, email, location, or any account or device identifiers along with it. This processing happens with your consent, which you provide in the app before any image is sent.</p>
+        <p>Google processes this image to provide the detection result and in accordance with its own terms. You can learn more about how Google handles data through the Gemini API in <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Google&rsquo;s API terms</a>.</p>
+      </section>
+
       <section id="sharing">
-        <span class="micro">03 — Sharing</span>
+        <span class="micro">04 — Sharing</span>
         <h2>Sharing &amp; disclosure</h2>
         <p>We share data only with the service providers that help us operate Wearing, and only as needed:</p>
         <ul class="clean">
           <li><strong>Supabase</strong> — secure cloud storage, database, and authentication for your account and wardrobe.</li>
-          <li><strong>Google</strong> — to offer Sign in with Google.</li>
+          <li><strong>Google (Sign-In)</strong> — to offer Sign in with Google.</li>
+          <li><strong>Google Gemini API</strong> — when you add a clothing item, the item photo is sent to Google&rsquo;s Gemini API to automatically detect garment attributes such as type and color. No personal or account information is sent with the image.</li>
           <li><strong>Legal &amp; safety</strong> — if required by law, or to protect the rights, safety, and security of our users and the service.</li>
         </ul>
-        <p>These providers are bound to handle your data securely and only for the purposes we authorize.</p>
+        <p>These providers are bound to handle your data securely and only for the purposes we authorize. We do not sell your personal information.</p>
       </section>
 
       <section id="storage">
-        <span class="micro">04 — Security</span>
+        <span class="micro">05 — Security</span>
         <h2>Storage &amp; security</h2>
         <p>Your data is stored on secure cloud infrastructure provided by Supabase. We use encryption in transit, access controls, and row-level security so that you can only see your own data.</p>
         <p>No method of transmission or storage is ever completely secure, but we work to protect your information using industry-standard safeguards.</p>
       </section>
 
       <section id="permissions">
-        <span class="micro">05 — Permissions</span>
+        <span class="micro">06 — Permissions</span>
         <h2>Device permissions</h2>
         <p>Wearing asks for permissions only when a feature needs them, and you can change them anytime in your device settings.</p>
         <ul class="clean">
@@ -342,7 +353,7 @@
       </section>
 
       <section id="rights">
-        <span class="micro">06 — Control</span>
+        <span class="micro">07 — Control</span>
         <h2>Your rights &amp; choices</h2>
         <ul class="clean">
           <li><strong>Access &amp; edit.</strong> View and update your profile and wardrobe data from within the app.</li>
@@ -354,25 +365,25 @@
       </section>
 
       <section id="retention">
-        <span class="micro">07 — Retention</span>
+        <span class="micro">08 — Retention</span>
         <h2>Data retention</h2>
         <p>We keep your information for as long as your account is active. When you delete your account, we delete or anonymize your personal data, except where we&rsquo;re required to retain it for legal reasons.</p>
       </section>
 
       <section id="children">
-        <span class="micro">08 — Children</span>
+        <span class="micro">09 — Children</span>
         <h2>Children&rsquo;s privacy</h2>
         <p>Wearing is not directed to children under 13, and we do not knowingly collect personal information from them. If you believe a child has provided us data, contact us and we&rsquo;ll remove it.</p>
       </section>
 
       <section id="changes">
-        <span class="micro">09 — Updates</span>
+        <span class="micro">10 — Updates</span>
         <h2>Changes to this policy</h2>
         <p>We may update this policy as Wearing evolves. When we make material changes, we&rsquo;ll revise the date above and, where appropriate, notify you in the app. Continued use means you accept the updated policy.</p>
       </section>
 
       <div class="contact" id="contact">
-        <span class="micro">10 — Contact</span>
+        <span class="micro">11 — Contact</span>
         <h2>Questions? Talk to us.</h2>
         <p>If you have any questions about this policy or how your data is handled, we&rsquo;re happy to help.</p>
         <a class="mail" href="mailto:akpatel1031@gmail.com">akpatel1031@gmail.com</a>
